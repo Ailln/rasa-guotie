@@ -15,6 +15,10 @@ rasa train
 
 # 在 shell 中与「锅贴」对话
 rasa shell
+# Bot loaded. Type a message and press enter (use '/stop' to exit): 
+# Your input ->  你好                                                                                                                                                                                                                                                                                                     
+# 你好啊！我是锅贴，喵～
+# Your input -> /stop
 ```
 
 ## 许可证

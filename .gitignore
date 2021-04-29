@@ -114,3 +114,6 @@ files.txt
 
 # project
 models/*.tar.gz
+models/pre-train/
+results/*.png
+results/*.json

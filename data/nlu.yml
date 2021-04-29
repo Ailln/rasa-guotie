@@ -9,13 +9,23 @@ nlu:
     - hello there
     - good morning
     - good evening
-    - moin
     - hey there
     - let's go
     - hey dude
     - goodmorning
     - goodevening
     - good afternoon
+    - 你好
+    - 你好啊
+    - 你好啊！
+    - 您好
+    - 您好啊
+    - 您好啊！
+    - 早上好
+    - 早啊
+    - 中午好
+    - 晚上好
+
 
 - intent: goodbye
   examples: |
@@ -30,6 +40,11 @@ nlu:
     - see you around
     - bye bye
     - see you later
+    - 再见
+    - 拜拜
+    - 拜
+    - 886
+    - see you
 
 - intent: affirm
   examples: |

@@ -11,7 +11,7 @@ intents:
 
 responses:
   utter_greet:
-  - text: "Hey! How are you?"
+  - text: "你好啊！我是锅贴，喵～"
 
   utter_cheer_up:
   - text: "Here is something to cheer you up:"
@@ -24,7 +24,7 @@ responses:
   - text: "Great, carry on!"
 
   utter_goodbye:
-  - text: "Bye"
+  - text: "再见啦！"
 
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."
