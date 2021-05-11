@@ -1,107 +1,68 @@
 version: "2.0"
 
 nlu:
-- intent: greet
+- intent: 再见
   examples: |
-    - hey
-    - hello
-    - hi
-    - hello there
-    - good morning
-    - good evening
-    - hey there
-    - let's go
-    - hey dude
-    - goodmorning
-    - goodevening
-    - good afternoon
-    - 你好
-    - 你好啊
-    - 你好啊！
-    - 您好
-    - 您好啊
-    - 您好啊！
-    - 早上好
-    - 早啊
-    - 中午好
-    - 晚上好
-
-
-- intent: goodbye
-  examples: |
-    - good afternoon
-    - cu
-    - good by
-    - cee you later
-    - good night
-    - bye
-    - goodbye
-    - have a nice day
-    - see you around
-    - bye bye
-    - see you later
-    - 再见
     - 拜拜
     - 拜
-    - 886
-    - see you
-
-- intent: affirm
+    - 再见
+    - 88
+- intent: 问候
   examples: |
-    - yes
-    - y
-    - indeed
-    - of course
-    - that sounds good
-    - correct
-
-- intent: deny
+    - nihao
+    - 你好
+    - 您好
+    - 你好啊
+    - Hi
+    - hi
+    - hello
+    - Hello
+- intent: 姓名
   examples: |
-    - no
-    - n
-    - never
-    - I don't think so
-    - don't like that
-    - no way
-    - not really
-
-- intent: mood_great
+    - 你叫什么？
+    - 你叫什么
+    - 你是谁？
+    - 你是谁
+    - 你叫啥？
+    - 你是
+    - 名字
+    - 你的名字?
+    - 你叫啥名字
+- intent: 年龄
   examples: |
-    - perfect
-    - great
-    - amazing
-    - feeling like a king
-    - wonderful
-    - I am feeling very good
-    - I am great
-    - I am amazing
-    - I am going to save the world
-    - super stoked
-    - extremely good
-    - so so perfect
-    - so good
-    - so perfect
-
-- intent: mood_unhappy
+    - 你多大啦？
+    - 你几岁？
+    - 你几岁啦
+    - 你现在几岁
+- intent: 性别
   examples: |
-    - my day was horrible
-    - I am sad
-    - I don't feel very well
-    - I am disappointed
-    - super sad
-    - I'm so sad
-    - sad
-    - very sad
-    - unhappy
-    - not good
-    - not very good
-    - extremly sad
-    - so saad
-    - so sad
-
-- intent: bot_challenge
+    - 你是男的？
+    - 你是男的
+    - 你是女的
+    - 你的性别？
+    - 你是男还是女
+- intent: 父母
   examples: |
-    - are you a bot?
-    - are you a human?
-    - am I talking to a bot?
-    - am I talking to a human?
+    - 你爸是谁？
+    - 你爸
+    - 你妈是？
+    - 你妈是
+    - 你父母是谁？
+    - 你爸叫啥？
+    - 你爸爸叫啥？
+    - 你有妈妈吗？
+- intent: 功能
+  examples: |
+    - 你能干啥？
+    - 你能干啥
+    - 你能干什么？
+    - 你能干什么
+    - 你可以做什么？
+    - 你可以做啥
+    - 你有什么功能？
+- intent: 问路
+  examples: |
+    - 你知道[杭州](位置)怎么过去吗？
+    - 请问[西湖](位置)怎么走？
+    - 我想请问[灵隐寺](位置)怎么走？
+    - 请问[西湖](位置)或者是[灵隐寺](位置)怎么走？

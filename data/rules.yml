@@ -2,12 +2,43 @@ version: "2.0"
 
 rules:
 
-- rule: Say goodbye anytime the user says goodbye
+- rule: 再见
   steps:
-  - intent: goodbye
-  - action: utter_goodbye
+  - intent: 再见
+  - action: utter_bye
 
-- rule: Say 'I am a bot' anytime the user challenges
+- rule: 问候
   steps:
-  - intent: bot_challenge
-  - action: utter_iamabot
+  - intent: 问候
+  - action: utter_greet
+
+- rule: 姓名
+  steps:
+  - intent: 姓名
+  - action: utter_name
+
+- rule: 年龄
+  steps:
+  - intent: 年龄
+  - action: utter_age
+
+- rule: 性别
+  steps:
+  - intent: 性别
+  - action: utter_sex
+
+- rule: 父母
+  steps:
+  - intent: 父母
+  - action: utter_parent
+
+- rule: 功能
+  steps:
+  - intent: 功能
+  - action: utter_feature
+
+- rule: 问路
+  steps:
+  - intent: 问路
+  - action: utter_ask
+
