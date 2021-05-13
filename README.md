@@ -4,9 +4,13 @@
 
 > 众所（不）周知，「锅贴」是是我家的一只猫，我平时和他对话，他每次都回复我「喵」～而这个基于 Rasa 的聊天机器人就不一样了，他可以通过文字表达自己的想法，不信你试试！
 
-## 快速上手
+[![](.github/src/guotie_v0-1-0_test.png)](https://guotie.ailln.com/guest/conversations/production/12fd779ce02a45d495d85613beb3d676)
 
-### 训练 Rasa Model
+[🔗 Demo Link](https://guotie.ailln.com/guest/conversations/production/12fd779ce02a45d495d85613beb3d676)
+
+## 1 快速上手
+
+### 1.1 训练 Rasa Model
 
 ```bash
 # 安装
@@ -31,7 +35,7 @@ rasa shell
 rasa run --enable-api
 ```
 
-### 使用 Rasa X
+### 1.2 使用 Rasa X
 
 ```bash
 # 安装
@@ -41,14 +45,14 @@ pip install rasa-x --extra-index-url https://pypi.rasa.com/simple
 rasa x
 ```
 
-## Rasa 使用的常见问题
+## 2 Rasa 使用的常见问题
 
-### 1 jieba + bert 结合使用出现错误
+### 2.1 jieba + bert 结合使用出现错误
 
 - 这是一个高频问题，具体的讨论见 [rasa issue](https://github.com/RasaHQ/rasa/issues/8381);
 - 目前来看无法使用，建议使用自定义的 bert token 去完成分词，代码见 [bert_tokenizer](./components/bert_tokenizer.py)，配置见 [config](config.yml)。
 
-### 2 安装 rasa x 超时
+### 2.2 安装 rasa x 超时
 
 ```bash
 INFO: This is taking longer than usual. You might need to provide the dependency resolver with stricter constraints to \
@@ -62,7 +66,7 @@ what happened here: https://pip.pypa.io/surveys/backtracking
 pip install pip==20.2
 ```
 
-### 3 运行 rasa x 命令时出错
+### 2.3 运行 rasa x 命令时出错
 
 ```bash
 from socketio import AsyncServer
@@ -73,11 +77,11 @@ ImportError: cannot import name 'AsyncServer'
 
 参考配置：在 rasa x 为 0.39.3 时，python-socketio 为 5.0.0，python-engineio 为 3.13.0。
 
-## 许可证
+## 3 许可证
 
 [![](https://award.dovolopor.com?lt=License&rt=MIT&rbc=green)](./LICENSE)
 
-## 参考
+## 4 参考
 
 - [Rasa docs](https://rasa.com/docs/)
 - [rasa_ch_faq](https://github.com/Dustyposa/rasa_ch_faq)
