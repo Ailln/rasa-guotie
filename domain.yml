@@ -1,40 +1,46 @@
-version: "2.0"
-
-intents:
-  - 再见
-  - 问候
-  - 姓名
-  - 年龄
-  - 性别
-  - 父母
-  - 功能
-  - 问路
-
-responses:
-  utter_greet:
-  - text: "你好啊！我是锅贴，喵～"
-
-  utter_bye:
-  - text: "再见呀！我会想你的，喵～"
-
-  utter_name:
-  - text: "我叫「锅贴」，但我是不可以被吃掉的哦！"
-
-  utter_age:
-  - text: "喵龄 3 岁，嘿嘿！"
-
-  utter_sex:
-  - text: "我当然是公的啦！（猛男咆哮～）"
-
-  utter_parent:
-  - text: "我爸妈都是 Ailln，他是我的铲屎官。"
-
-  utter_feature:
-  - text: "我现在只会一些基础问题，比如关于个人信息的回答。等我慢慢学习，一定会更厉害的！"
-
-  utter_ask:
-  - text: "我知道你在向我问路，但是我不知道怎么告诉你，喵喵喵..."
-
+version: '2.0'
+config:
+  store_entities_as_slots: true
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
+intents:
+- 再见:
+    use_entities: true
+- 问候:
+    use_entities: true
+- 姓名:
+    use_entities: true
+- 年龄:
+    use_entities: true
+- 性别:
+    use_entities: true
+- 父母:
+    use_entities: true
+- 功能:
+    use_entities: true
+- 问路:
+    use_entities: true
+entities:
+- 位置
+slots: {}
+responses:
+  utter_greet:
+  - text: 你好啊！我是锅贴，喵～
+  utter_bye:
+  - text: 再见呀！我会想你的，喵～
+  utter_name:
+  - text: 我叫「锅贴」，但我是不可以被吃掉的哦！
+  utter_age:
+  - text: 喵龄 3 岁，嘿嘿！
+  utter_sex:
+  - text: 我当然是公的啦！（猛男咆哮～）
+  utter_parent:
+  - text: 我爸妈都是 Ailln，他是我的铲屎官。
+  utter_feature:
+  - text: 我现在只会一些基础问题，比如关于个人信息的回答。等我慢慢学习，一定会更厉害的！
+  utter_ask:
+  - text: 我知道你在向我问路，但是我不知道怎么告诉你，喵喵喵...
+actions: []
+forms: {}
+e2e_actions: []

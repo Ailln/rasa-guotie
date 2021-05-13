@@ -117,3 +117,8 @@ models/*.tar.gz
 models/pre-train/
 results/*.png
 results/*.json
+
+# rasa x
+*.db
+*.db-shm
+*.db-wal
