@@ -41,8 +41,11 @@ rasa run --enable-api
 # 安装
 pip install rasa-x --extra-index-url https://pypi.rasa.com/simple
 
-# 运行
+# 运行 rasa x
 rasa x
+
+# 运行 action
+rasa run actions --debug
 ```
 
 ## 2 Rasa 使用的常见问题

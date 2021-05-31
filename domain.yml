@@ -5,6 +5,8 @@ session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 intents:
+- nlu_fallback:
+    use_entities: true
 - 再见:
     use_entities: true
 - 问候:
@@ -21,10 +23,37 @@ intents:
     use_entities: true
 - 问路:
     use_entities: true
+- 询问天气情况:
+    use_entities: true
+- 日期:
+    use_entities: true
+- 城市:
+    use_entities: true
+- 闲聊:
+    use_entities: true
 entities:
 - 位置
-slots: {}
+- 日期
+- 城市
+slots:
+  city:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+  date:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+  requested_slot:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
 responses:
+  utter_nlu_fallback:
+  - text: 不好意思，我还没学会如何使用人类语言回答你，请试试其他问题吧～
   utter_greet:
   - text: 你好啊！我是锅贴，喵～
   utter_bye:
@@ -41,6 +70,20 @@ responses:
   - text: 我现在只会一些基础问题，比如关于个人信息的回答。等我慢慢学习，一定会更厉害的！
   utter_ask:
   - text: 我知道你在向我问路，但是我不知道怎么告诉你，喵喵喵...
-actions: []
-forms: {}
+actions:
+- action_weather_form
+- validate_weather_form
+- action_ask_weather_form_city
+- action_ask_weather_form_date
+forms:
+  weather_form:
+    ignored_intents:
+    - 闲聊
+    required_slots:
+      city:
+      - entity: 城市
+        type: from_entity
+      date:
+      - entity: 日期
+        type: from_entity
 e2e_actions: []

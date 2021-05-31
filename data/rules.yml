@@ -1,6 +1,10 @@
 version: "2.0"
 
 rules:
+- rule: 超出范围
+  steps:
+  - intent: nlu_fallback
+  - action: utter_nlu_fallback
 
 - rule: 再见
   steps:
@@ -42,3 +46,34 @@ rules:
   - intent: 问路
   - action: utter_ask
 
+- rule: 激活天气情况
+  steps:
+  - intent: 询问天气情况
+  - action: weather_form
+  - active_loop: weather_form
+
+- rule: 通过日期激活天气情况
+  steps:
+  - intent: 日期
+  - action: weather_form
+  - slot_was_set:
+    - requested_slot: date
+  - active_loop: weather_form
+
+- rule: 通过城市激活天气情况
+  steps:
+  - intent: 城市
+  - action: weather_form
+  - slot_was_set:
+    - requested_slot: city
+  - active_loop: weather_form
+
+- rule: 处理天气情况
+  condition:
+  - active_loop: weather_form
+  steps:
+  - action: weather_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: action_weather_form

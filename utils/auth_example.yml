@@ -1,0 +1,5 @@
+action:
+  qweather:
+    city_lookup_url: https://geoapi.qweather.com/v2/city/lookup
+    weather_url: https://devapi.qweather.com/v7/weather/3d?
+    query_key: "" # https://console.qweather.com/#/apps 需要注册账号，创建应用获取 KEY
