@@ -4,7 +4,7 @@
 
 > 众所（不）周知，「锅贴」是是我家的一只猫，我平时和他对话，他每次都回复我「喵」～而这个基于 Rasa 的聊天机器人就不一样了，他可以通过文字表达自己的想法，不信你试试！
 
-[![](.github/src/guotie_v0-1-0_test.png)](https://guotie.ailln.com/guest/conversations/production/12fd779ce02a45d495d85613beb3d676)
+[![](.github/src/guotie_v0-2-1_test.png)](https://guotie.ailln.com/guest/conversations/production/12fd779ce02a45d495d85613beb3d676)
 
 [🔗 Demo Link](https://guotie.ailln.com/guest/conversations/production/12fd779ce02a45d495d85613beb3d676)
 
