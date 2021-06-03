@@ -46,6 +46,7 @@ rules:
   - intent: 问路
   - action: utter_ask
 
+# 天气 Form
 - rule: 激活天气情况
   steps:
   - intent: 询问天气情况

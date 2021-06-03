@@ -8,6 +8,8 @@
 
 [🔗 Demo Link](https://guotie.ailln.com/guest/conversations/production/12fd779ce02a45d495d85613beb3d676)
 
+> 🎈 `v0.2.1 update`: 添加正则实体提取器，完善「询问天气」功能。
+
 ## 1 快速上手
 
 ### 1.1 训练 Rasa Model
@@ -17,7 +19,7 @@
 pip install -r requirements.txt
 
 # 训练
-rasa train
+rasa trainq
 
 # 在 shell 中与「锅贴」对话
 rasa shell

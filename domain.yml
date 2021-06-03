@@ -47,27 +47,35 @@ slots:
     auto_fill: true
     influence_conversation: true
   requested_slot:
-    type: rasa.shared.core.slots.UnfeaturizedSlot
+    type: rasa.shared.core.slots.AnySlot
     initial_value: null
     auto_fill: true
     influence_conversation: false
 responses:
   utter_nlu_fallback:
   - text: 不好意思，我还没学会如何使用人类语言回答你，请试试其他问题吧～
+  - text: 不好意思，这个我还不太会哦～
   utter_greet:
   - text: 你好啊！我是锅贴，喵～
+  - text: 你好呀！我是锅贴，一只可爱的猫猫，汪汪汪～
   utter_bye:
   - text: 再见呀！我会想你的，喵～
+  - text: 88，喵～
   utter_name:
   - text: 我叫「锅贴」，但我是不可以被吃掉的哦！
+  - text: 我叫「锅贴」，不是那个可以吃的锅贴！
   utter_age:
   - text: 喵龄 3 岁，嘿嘿！
+  - text: 我喵龄 3 岁！
   utter_sex:
   - text: 我当然是公的啦！（猛男咆哮～）
+  - text: 充满魅力的雄性（不过已经成为太监啦，忧伤...）
   utter_parent:
   - text: 我爸妈都是 Ailln，他是我的铲屎官。
+  - text: 无敌 Ailln !
   utter_feature:
   - text: 我现在只会一些基础问题，比如关于个人信息的回答。等我慢慢学习，一定会更厉害的！
+  - text: 我现在只会一些基础问题，比如关于个人信息的回答。最近还学会了「查天气」技能，试试问我「天气怎么样？」
   utter_ask:
   - text: 我知道你在向我问路，但是我不知道怎么告诉你，喵喵喵...
 actions:

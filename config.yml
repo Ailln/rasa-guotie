@@ -7,12 +7,12 @@ pipeline:
   # # If you'd like to customize it, uncomment and adjust the pipeline.
   # # See https://rasa.com/docs/rasa/tuning-your-model for more information.
   - name: components.bert_tokenizer.CustomBertTokenizer
-    model_name: "bert"
-    model_weights: "bert-base-chinese"
+    model_name: bert
+    model_weights: bert-base-chinese
     cache_dir: ./models/pre-train/
   - name: LanguageModelFeaturizer
-    model_name: "bert"
-    model_weights: "bert-base-chinese"
+    model_name: bert
+    model_weights: bert-base-chinese
     cache_dir: ./models/pre-train/
   - name: CountVectorsFeaturizer
   - name: CountVectorsFeaturizer
@@ -20,12 +20,17 @@ pipeline:
     min_ngram: 1
     max_ngram: 4
   - name: DIETClassifier
-    epochs: 20
+    epochs: 50
     constrain_similarities: true
     model_confidence: linear_norm
+  - name: RegexEntityExtractor
+    case_sensitive: False
+    use_lookup_tables: True
+    use_regexes: True
+    use_word_boundaries: False
   - name: EntitySynonymMapper
   - name: ResponseSelector
-    epochs: 20
+    epochs: 50
     constrain_similarities: true
     model_confidence: linear_norm
   - name: FallbackClassifier
@@ -41,7 +46,7 @@ policies:
   - name: MemoizationPolicy
 #  - name: TEDPolicy
 #    max_history: 5
-#    epochs: 20
+#    epochs: 50
 #    constrain_similarities: true
 #    model_confidence: linear_norm
   - name: RulePolicy

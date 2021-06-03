@@ -4,6 +4,7 @@
 # See this guide on how to implement these action:
 # https://rasa.com/docs/rasa/custom-actions
 
+import logging
 from typing import Text
 from typing import Dict
 from typing import List
@@ -17,6 +18,8 @@ from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.types import DomainDict
 
 from utils.action_util import get_weather
+
+logger = logging.getLogger(__name__)
 
 
 class ActionWeatherForm(Action):
@@ -41,6 +44,9 @@ class ValidateWeatherForm(FormValidationAction):
 
     def validate_date(self, slot_value: Any, dispatcher: CollectingDispatcher, tracker: Tracker, domain: DomainDict) \
             -> Dict[Text, Any]:
+        if type(slot_value) == list:
+            slot_value = slot_value[0]
+
         if slot_value in self.get_date_list():
             return {"date": slot_value}
         else:
@@ -52,6 +58,9 @@ class ValidateWeatherForm(FormValidationAction):
 
     def validate_city(self, slot_value: Any, dispatcher: CollectingDispatcher, tracker: Tracker, domain: DomainDict) \
             -> Dict[Text, Any]:
+        if type(slot_value) == list:
+            slot_value = slot_value[0]
+
         if slot_value in self.get_city_list():
             return {"city": slot_value}
         else:
