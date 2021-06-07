@@ -8,7 +8,7 @@
 
 [🔗 Demo Link](https://guotie.ailln.com/guest/conversations/production/12fd779ce02a45d495d85613beb3d676)
 
-> 🎈 `v0.2.1 update`: 添加正则实体提取器，完善「询问天气」功能。
+> 🐛v0.2.2: fix yaml encoding in win.
 
 ## 1 快速上手
 
@@ -19,7 +19,7 @@
 pip install -r requirements.txt
 
 # 训练
-rasa trainq
+rasa train
 
 # 在 shell 中与「锅贴」对话
 rasa shell
@@ -54,7 +54,7 @@ rasa run actions --debug
 
 ### 2.1 jieba + bert 结合使用出现错误
 
-- 这是一个高频问题，具体的讨论见 [rasa issue](https://github.com/RasaHQ/rasa/issues/8381);
+- 这是一个高频问题，具体地讨论见 [rasa issue](https://github.com/RasaHQ/rasa/issues/8381);
 - 目前来看无法使用，建议使用自定义的 bert token 去完成分词，代码见 [bert_tokenizer](./components/bert_tokenizer.py)，配置见 [config](config.yml)。
 
 ### 2.2 安装 rasa x 超时
@@ -78,9 +78,9 @@ from socketio import AsyncServer
 ImportError: cannot import name 'AsyncServer'
 ```
 
-安装合适版本的 python-socketio 和 python-engineio。
+安装合适版本的 `python-socketio` 和 `python-engineio`。
 
-参考配置：在 rasa x 为 0.39.3 时，python-socketio 为 5.0.0，python-engineio 为 3.13.0。
+参考配置：在 `rasa x` 为 0.39.3 时，`python-socketio` 为 5.0.0，`python-engineio` 为 3.13.0。
 
 ## 3 许可证
 
